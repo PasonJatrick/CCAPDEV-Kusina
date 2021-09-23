@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+        <!-- Custom Styling -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+        <!-- Slick Carousel -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- Custom Script -->
+        <script src="js/scripts.js"></script>
+        <script src="js/Modal.js"></script>
+        
+        <title>Manage Posts</title>
+    </head>
+
+    <body>
+    <header>
+		{{>header}}
+	</header>
+
+        <!-- Admin Page Wrapper -->
+        <div class="admin-wrapper">
+
+            <!-- Left Sidebar -->
+            <div class="left-sidebar">
+                <ul>
+                    <li><a href="/profile">Manage Profile</a></li>
+					<li><a href="/posts">Manage Posts</a></li>
+                </ul>
+            </div>
+            <!-- // Left Sidebar -->
+
+
+            <!-- Admin Content -->
+            <div class="admin-content">
+                <div class="button-group">
+                    <a href="/createPost" class="btn btn-big">Add Post</a>
+                    <a href="/posts" class="btn btn-big">Manage Posts</a>
+                </div>
+
+
+                <div class="content">
+
+                    <h2 class="page-title">Manage Posts</h2>
+
+                    <table>
+                        <thead>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th colspan="3">Action</th>
+                        </thead>
+                        <tbody>
+                            {{#each userpost}} 
+                                <tr>
+                                <td>{{Date}}</td>
+                                <td>{{FoodTitle}}</td>
+                                <td>Guest</td>
+                                <td><a href="#" class="edit">edit</a></td>
+                                <td><a href="#" class="delete">delete</a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+            <!-- // Admin Content -->
+
+        </div>
+        <!-- // Page Wrapper -->
+
+    </body>
+
+</html>

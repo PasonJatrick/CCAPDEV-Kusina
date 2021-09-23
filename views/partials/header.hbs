@@ -1,0 +1,159 @@
+<header>
+		<div class="logo">
+			<h1 class="logo-text"><a href="/"><span>Kusina</span></a></h1>
+		</div>
+		
+		<div>
+		  <form id="SearchBar">
+			<input name="search" id="search" placeholder="Recipes/Authors" type="text"><button type="submit"><i class="bi bi-search"></i></button>
+		  </form>
+		</div>
+		<i class="fa fa-bars menu-toggle"></i>
+		<ul class="nav">
+          <li><a href="/">Home</a>
+		  <li><a href="/posts">Manage Posts</a></li>
+		  <li>
+			<a href="#" id="Username" value="Lola">
+			  <i class="fa fa-user"></i>
+			  Lola
+			  <i class="fa fa-chevron-down"></i>
+			</a>
+			<ul>
+			  <li><a href="#" data-toggle="modal" data-target="#myModal">Sign in / Register</a></li>
+				<div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						
+						<div class="bs-example bs-example-tabs">
+							<ul id="myTab" class="nav nav-tabs">
+							  <li id="tab1" class=" active tab-style login-shadow "><a href="#signin" data-toggle="tab">Log In</a></li>
+							  <li id="tab2" class=" tab-style signup-shadow"><a href="#signup" data-toggle="tab">Sign Up</a></li>
+							  
+							</ul>
+						</div>
+					  <div class="modal-body">
+						<div id="myTabContent" class="tab-content">
+					   
+							<div class="tab-pane fade active in" id="signin">
+							<form class="form-horizontal" action="/login" id ="LogInForm" method="POST">
+								<fieldset>
+									  <!-- Sign In Form -->
+									  <!-- Text input-->
+									  
+									  <div class="group">
+										<input required="" class="input" type="text" name="email" id="email"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Email address</label>
+									   </div>
+									  
+									  
+									  <!-- Password input-->
+									  <div class="group">
+										<input required="" class="input" type="password" name="password" id="password"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Password</label>
+									  </div>
+
+									  <div class="forgot-link">
+										<a href="#forgot" data-toggle="modal" data-target="#forgot-password"> I forgot my password</a>
+									  </div>
+									
+	
+									  <!-- Button -->
+									  <div class="control-group">
+										<label class="control-label" for="signin"></label>
+										<div class="controls">
+										  <button id="signin" name="signin" class="btn btn-primary btn-block">Log In</button>
+										</div>
+									  </div>
+									</fieldset>
+							</form>
+						</div>
+						  
+						  
+						<div class="tab-pane fade" id="signup">
+							<form class="form-horizontal" action="/create-user" id="SignUpForm" method="POST">
+								<fieldset>
+									  <!-- Sign Up Form -->
+									  <!-- Text input-->
+									  <div class="group">
+										<input required="" class="input" type="text" name="Username" id="Username"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Username</label>
+									  </div>
+									
+									  <!-- Text input-->
+									  <div class="group">
+										<input required="" class="input" type="text" name="Email" id="Email"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Email</label>
+									  </div>
+									
+									  <!-- Password input-->
+									  <div class="group">
+										<input required="" class="input" type="password" name="Password" id="Password"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Password</label></div>
+										  <em>6 Characters min</em>
+
+									  <!-- Text input-->
+									  <div class="group">
+										<input required="" class="input" type="password" name="confirmPass" id="confirmPass"><span class="highlight"></span><span class="bar"></span>
+										<label class="label" for="date">Re-enter password</label>
+									  </div>
+									
+									  <!-- Button -->
+									  <div class="control-group">
+										<label class="control-label" for="confirmsignup"></label>
+										<div class="controls">
+										  <button id="confirmsignup" name="confirmsignup" class="btn btn-primary btn-block">Sign Up</button>
+										</div>
+									  </div>
+									</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+				  <div class="modal-footer">
+					  <center>
+					  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					  </center>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			  
+			   
+
+			<!--modal2-->
+
+			<div class="modal fade bs-modal-sm" id="forgot-password" tabindex="0" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <h4 class="modal-title" id="myModalLabel">Password will be sent to your email</h4>
+					</div>
+					<div class="modal-body">
+					  <form class="form-horizontal">
+						  <fieldset>
+							<div class="group">
+							  <input required="" class="input" type="text"><span class="highlight"></span><span class="bar"></span>
+							  <label class="label" for="date">Email address</label>
+							</div>
+						
+						
+							<div class="control-group">
+							  <label class="control-label" for="forpassword"></label>
+							  <div class="controls">
+								<button id="forpasswodr" name="forpassword" class="btn btn-primary btn-block">Send</button>
+							  </div>
+							</div>
+						  </fieldset>
+					  </form>
+					  
+					</div>
+				</div>
+			  </div>
+			</div>
+			
+          <li><a href="#" class="logout">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>

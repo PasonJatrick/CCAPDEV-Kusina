@@ -1,0 +1,132 @@
+<div class="post clearfix" id="userpost">
+          <img src={{FoodImg}} alt={{FoodTitle}} class="post-image">
+          <div class="post-preview">
+            <h2>{{FoodTitle}}</h2>
+            <i class="far fa-user" data-toggle="modal" data-target="#user1"> Lola</i>
+				<div class="modal fade" id="user1" tabindex="-1" role="dialog" aria-labelledby="user1" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<h5 class="modal-title" id="Lola">Lola</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  <div class="modal-body">
+						 <img src="images/Grandmama.jpg" alt="lola">
+							<h2>About Me</h2>
+							<p>
+							  I am your friendly neighborhood grandmama. I make Filipino food for my grandchildren. My children told me to share my recipes on this platform.
+							  That is why I am here. God bless you. Pagpalain ka nawa ng Diyos.
+							<br>
+							<br>
+							Signed <b>07/31/2021</b>
+							</p>
+							<h2>My Recipes</h2>
+							<div>
+							  <img src="images/Biko.jpg" alt="Biko" class="recipe-img">
+							  <h3>Biko</h3>
+							  <blockquote>
+							  Filipino coconut dessert.
+							  </blockquote>
+							</div>
+							<br style="clear:both">
+							<br style="clear:both">
+							<div>
+							  <img src="images/Buchi.jpg" alt="Buchi" class="recipe-img">
+							  <h3>Buchi</h3>
+							  <blockquote>
+							  Sweetened mung beans are deliciously wrapped in glutinous rice flour and deep fried to make this yummy Pinoy snack.
+							  </blockquote>
+							</div>
+							<br style="clear:both">
+							<br style="clear:both">
+							<div>
+							  <img src="images/Lumpia.jpg" alt="Lumpia" class="recipe-img">
+							  <h3>Traditional Filipino Lumpia</h3>
+							  <blockquote>
+							  This is a traditional Filipino dish. It is the Filipino version of the egg rolls. It can be served as a side dish or as an appetizer.
+							  </blockquote>
+							</div>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					  </div>
+					</div>
+				  </div>
+				</div>
+            &nbsp;
+            <i class="far fa-calendar"> {{Date}}</i>
+			&nbsp;
+			<i class="bi bi-tags">{{Category}}</i>
+            <p class="preview-text">
+              {{Description}}
+            </p>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#recipe1">Read More</a></button>
+			  
+				<div class="modal fade" id="recipe1" tabindex="-1" role="dialog" aria-labelledby="recipe1" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+					
+					<div class="modal-content">
+					  <div class="modal-header row d-flex justify-content-between mx-1 mx-sm-3 mb-0 pb-0 border-0">
+                        <div class="tabs active" id="recipe1Tab1">
+                          <h5 class="font-weight-bold">Directions</h6>
+                        </div>
+                      {{!  <div class="tabs" id="recipe1Tab2">
+                            <h5 class="text-muted">Ratings and Comments</h6>
+                        </div> }}
+                      </div>
+                    <div class="line"></div>
+					
+					  <div class="modal-header">
+						<h6 class="modal-title" id="recipe1Title">{{FoodTitle}}</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+					  </div>
+					  
+					  <div class="modal-body">					    
+						<fieldset class="show" id="recipe1Tab11">
+						  <img src="images/Buchi.jpg" alt="Buchi">
+							<h2>Description</h2>
+							<p>
+							  {{Description}}
+							<br>
+							<br>
+							</p>
+							<h2>Ingredients</h2>
+							<text>{{Ingredients}}</text>
+							<h2>Directions</h2>
+							<text>{{Directions}}</text>
+					    </fieldset>
+					   {{! <fieldset id="recipe1Tab21">
+						  <div class="modal-dialog modal-dialog-centered" role="document">
+							  <div class="modal-content">
+								<div class="text-right cross"> <i class="fa fa-times mr-2"></i> </div>
+								<div class="card-body text-center"> 
+								  <div class="comment-box text-center">
+									<h4>Add a comment</h4>
+									<div class="rating"> 
+									  <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> 
+									  <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> 
+									  <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> 
+									  <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> 
+									  <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> 
+									</div>
+									<div class="comment-area"> <textarea class="form-control" placeholder="what is your view?" rows="4"></textarea> </div>
+									<div class="text-center mt-4"> <button class="btn btn-success send px-5">Post<i class="fa fa-long-arrow-right ml-1"></i></button> </div>
+								  </div>
+								</div>
+							  </div>
+							</div>
+					    </fieldset> }} 
+					  </div>
+					
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					  </div>
+					</div>
+				  </div>
+				</div>	
+          </div>
+        </div>
